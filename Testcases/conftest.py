@@ -34,7 +34,6 @@ def get_browser(request):
     #     driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
     request.cls.driver = driver
-    # driver.get("http://qa.way2automation.com")
     driver.get(configReader.readConfig("basic info", "testsiteurl"))
     driver.maximize_window()
     driver.implicitly_wait(10)
